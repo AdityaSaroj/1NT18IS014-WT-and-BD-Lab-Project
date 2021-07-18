@@ -1,0 +1,10 @@
+.moodboard {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  .contact-link {
+    text-decoration: none;
+    color: $deep-pink;
+  }
+}

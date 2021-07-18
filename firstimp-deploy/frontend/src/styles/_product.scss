@@ -1,0 +1,212 @@
+.product {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: none;
+  .product-image {
+    //background: gray;
+    float: left;
+    padding: 30px 0px 50px 80px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    img,
+    .magnify {
+      width: 450px;
+      height: 450px;
+      position: relative;
+    }
+  }
+  .two {
+    .product-title {
+      font-size: 2em;
+      font-weight: 500;
+    }
+    //background: hotpink;
+    width: 50%;
+    padding: 30px 150px 50px 0;
+    margin-left: 10px;
+    h3 {
+      padding-bottom: 3px;
+    }
+    p {
+      text-align: justify;
+      font-size: 14px;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        width: 100%;
+        display: flex;
+        font-size: 12px;
+        padding: 0 0 4px;
+        span:first-child {
+          min-width: 35%;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+    .product-btn {
+      border: 1.75px solid $deep-pink;
+      outline: none;
+      background: $white;
+      padding: 7px;
+      color: $deep-pink;
+      margin: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: 0.5s;
+      &:hover {
+        color: $white;
+        background: $deep-pink;
+      }
+    }
+    span {
+      img {
+        height: 40px;
+        width: 40px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.whatsapp-link {
+  text-decoration: none;
+  color: $dark-grey;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  .whatsapp-logo {
+    color: #25d366;
+  }
+  span {
+    display: inline;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .product {
+    .product-image {
+      img,
+      .magnify {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $desktop) {
+  .product {
+    flex-direction: column;
+    .product-image,
+    .two {
+      width: 100%;
+      margin-left: 0;
+    }
+    .product-image {
+      padding-left: 0;
+      padding-right: 0;
+      img,
+      .magnify {
+        width: 350px;
+        height: 350px;
+      }
+    }
+    .two {
+      padding: 50px 40px;
+      ul {
+        li {
+          span:first-child {
+            min-width: 35%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $tablet) {
+  .product {
+    flex-direction: column;
+    .product-image,
+    .two {
+      width: 100%;
+    }
+    .product-image {
+      padding: 50px auto;
+      margin: auto;
+      height: 390px;
+      img,
+      .magnify {
+        width: 280px;
+        height: 280px;
+      }
+    }
+    .two {
+      padding: 20px;
+      padding-top: 0;
+    }
+  }
+}
+
+.hideTab {
+  display: none;
+}
+
+.showTab {
+  display: block;
+  border: 2px solid $deep-pink;
+  background: $white;
+  padding: 20px;
+  padding-top: 15px;
+  max-width: 450px;
+  color: $dark-grey;
+}
+
+.tabs {
+  margin-left: 20px;
+  margin-top: 1px;
+  .tab-btn {
+    color: $black;
+    border: 2px solid $deep-pink;
+    border-bottom: none;
+    outline: 2px solid $white;
+    background: $light-grey;
+    margin: 0;
+    outline: none;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .tab-btn.active {
+    background-color: $white;
+    transform: scale(1.1);
+  }
+}
+
+.discount-span {
+  color: red;
+  font-size: 12px;
+}
+
+.unavailable {
+  margin-top: 5px;
+  color: $dark-grey;
+  margin-left: 3px;
+  .product-contact {
+    text-decoration: none;
+    color: $deep-pink;
+  }
+}

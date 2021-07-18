@@ -1,0 +1,343 @@
+.gallery {
+  .grid-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2em;
+    .filters {
+      h3 {
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+      }
+    }
+    .grid-buttons {
+      float: right;
+      margin-right: 30px;
+      span {
+        font-size: 24px;
+        margin: 5px 8px;
+        cursor: pointer;
+      }
+    }
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-column-gap: 0;
+    .gallery-item {
+      text-align: center;
+      text-decoration: none;
+      color: $black;
+      img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+      }
+      P {
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.the-filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2em;
+  margin-top: 0.5em;
+  .col {
+    flex: 1 0 18%; /* The important bit. This percentage decides your columns. 
+ The percent can be px. It just represents your minimum starting width.
+  */
+    margin: 5px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    h5 {
+      margin-bottom: 5px;
+    }
+    .group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      label {
+        font-size: 12px;
+        margin-left: 3px;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 12px;
+        width: 12px;
+        background-color: $light-grey;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        &::after {
+          display: none;
+        }
+        &:checked {
+          border: 1px solid $deep-pink;
+          background: url("../assets/images/pink-checkbox.jpg");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2em;
+  .col {
+    .group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      label {
+        font-size: 12px;
+        margin-left: 3px;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 12px;
+        width: 12px;
+        background-color: $light-grey;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        &::after {
+          display: none;
+        }
+        &:checked {
+          border: 1px solid $deep-pink;
+          background: url("../assets/images/pink-checkbox.jpg");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.the-filters {
+  input[type="radio"]:after {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: $light-grey;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid $dark-grey;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked:after {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: $deep-pink;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid $dark-grey;
+    cursor: pointer;
+  }
+}
+
+.product-length {
+  padding-left: 3em;
+}
+
+@media all and(max-width: $desktop) {
+  .the-filters {
+    flex-direction: column;
+    margin: 0 1.5em;
+    .col {
+      width: 100%;
+    }
+  }
+}
+
+@media all and(max-width: $large-desktop) {
+  .gallery {
+    .gallery-grid {
+      .gallery-item {
+        img {
+          width: 500px;
+          height: 500px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .gallery {
+    .gallery-grid {
+      grid-gap: 1rem;
+      .gallery-item {
+        img {
+          width: 400px;
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $desktop) {
+  .gallery {
+    .grid-menu {
+      margin: 0 20px;
+      .grid-buttons {
+        display: none;
+      }
+    }
+    .gallery-grid {
+      grid-gap: 1rem;
+      .gallery-item {
+        img {
+          width: 300px;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $tablet) {
+  .gallery {
+    .gallery-grid {
+      .gallery-item {
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $phone) {
+  .gallery {
+    margin: 0;
+    .gallery-grid {
+      grid-gap: 0.8rem;
+      .gallery-item {
+        img {
+          width: 140px;
+          height: 140px;
+          object-fit: cover;
+        }
+        P {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: $desktop) {
+  .gallery-grid.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-column-gap: 0;
+    .gallery-item {
+      text-align: center;
+      img {
+        width: 210px;
+        height: 210px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1240px) {
+  .gallery-grid.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-column-gap: 0;
+    .gallery-item {
+      text-align: center;
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $desktop) {
+  .gallery-grid.grid-8 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0.5rem;
+    grid-column-gap: 0;
+    .gallery-item {
+      text-align: center;
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1240px) {
+  .gallery-grid.grid-8 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0.5rem;
+    grid-column-gap: 0;
+    .gallery-item {
+      text-align: center;
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
+    }
+  }
+}

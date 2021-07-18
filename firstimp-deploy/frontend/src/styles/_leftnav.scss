@@ -1,0 +1,58 @@
+.leftnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: $white;
+  width: 250px;
+  height: 480px;
+  position: fixed;
+  z-index: 0;
+  top: 15%;
+  left: 50px;
+  overflow-x: hidden;
+  padding: 15px;
+  .leftnav-item {
+    font-family: "Lato", sans-serif;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: $black;
+    display: block;
+    transition: all 0.5s;
+    &:hover {
+      color: $deep-pink;
+    }
+  }
+  .logoimg {
+    margin-bottom: 10px;
+  }
+  .logo {
+    font-family: "Mistral Regular";
+    text-decoration: none;
+    color: $deep-pink;
+    font-size: 35px;
+    padding-bottom: 5px;
+  }
+  .social {
+    margin-top: 16px;
+    a {
+      padding: 0 10px;
+      .social-icon {
+        font-size: 22px;
+        color: $black;
+        transition: all 0.5s;
+        &:hover {
+          color: $deep-pink;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $desktop) {
+  .leftnav {
+    display: none;
+  }
+}
