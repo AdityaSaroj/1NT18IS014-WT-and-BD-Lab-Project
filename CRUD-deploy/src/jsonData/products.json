@@ -1,0 +1,56 @@
+[
+  {
+    "section": "fabric",
+    "productId": "S12",
+    "productName": "Blossom",
+    "desc": "some desc you wont read",
+    "brand": "jab",
+    "material": "100% silk",
+    "color": "Red",
+    "design": "Floral",
+    "application": ["Upholstery", "Curtain", "blinds"],
+    "instru": ["iron at low temp", "wash gently"],
+    "width": 137.8,
+    "length": 420,
+    "height": 567,
+    "weight": 423,
+    "repeatLength": 53,
+    "rollLength": 78,
+    "property": ["Rough&Tough", "Is what you'd expect"],
+    "style": "some style you like",
+    "image": [
+      "https://drive.google.com/file/d/1SLPEpxlei-UVJGTkrJ9pgP_AbXdta7Oe/view",
+      "https://drive.google.com/file/d/1SLPEpxlei-UVJGTkrJ9pgP_AbXdta7Oe/view"
+    ],
+    "price": 3500,
+    "delivery": 40,
+    "gst": 5
+  },
+  {
+    "section": "pillow cover",
+    "productId": "S13",
+    "productName": "nice cover",
+    "desc": "some desc you wont read anyway",
+    "brand": "generic",
+    "material": "100% cotton",
+    "color": "Blue",
+    "design": "Stripes",
+    "application": ["Upholstery", "Curtain"],
+    "instru": ["iron at low temp", "wash gently", "do not bleach"],
+    "width": 99.6,
+    "length": 67,
+    "height": 46,
+    "weight": 575,
+    "repeatLength": 24,
+    "rollLength": 73,
+    "property": ["Thin", "Strong"],
+    "style": "some style you like, or not idk",
+    "image": [
+      "https://drive.google.com/file/d/1SLPEpxlei-UVJGTkrJ9pgP_AbXdta7Oe/view",
+      "https://drive.google.com/file/d/1SLPEpxlei-UVJGTkrJ9pgP_AbXdta7Oe/view"
+    ],
+    "price": 4500,
+    "delivery": 40,
+    "gst": 5
+  }
+]
